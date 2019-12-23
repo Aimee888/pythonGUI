@@ -170,16 +170,20 @@ class TestBenchMaker:
         right1["bg"] = "white"
         right2["bg"] = "white"
         right3["bg"] = "white"
-        # left1["text"] = "xiugai"
-        # left1.destroy()
-        # right1.destroy()
-        # self.inputBox.insert(tk.END, "aaa")
-        # self.inputBox.insert(tk.END, "bbb")
-        # self.inputBox.insert(tk.END, "ccc")
-        # self.inputBox.insert(tk.END, "ddd")
-        # for i in range(0, 20):
-        #     self.inputBox.insert(tk.END, i)
         scroll.config(command=self.inputBox.yview)
+
+        tk.Label(frame3, text="", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+        tk.Label(frame3, text=" BiliBili", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+
+        items_list = tk.Frame(frame3)
+        items_list.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
+        # tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack()
+        tk.Label(items_list, text=" item1", font=("Arial, 15"), bg="Lavender", width=20).grid(row=0, column=0,
+                                                                                                   padx=1)
+        tk.Label(items_list, text=" item2", font=("Arial, 15"), bg="Lavender", width=8).grid(row=0, column=1,
+                                                                                                   padx=1)
+        tk.Text(items_list).grid(row=0, column=0, padx=10)
+
         return frame3
 
     def frame4_inter(self, frame4):
