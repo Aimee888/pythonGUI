@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 
 class TestBenchMaker:
@@ -104,36 +105,69 @@ class TestBenchMaker:
 
     def frame3_inter(self, frame3):
         frame3.pack(side=tk.TOP, fill=tk.X)
-        tk.Label(frame3, text=" Bit         Input").pack(side=tk.TOP, anchor=tk.W)
+        tk.Label(frame3, text="TEST1 CENTER", font=("Arial, 25")).pack(side=tk.TOP, fill=tk.X)
+        tk.Label(frame3, text="").pack(side=tk.TOP, anchor=tk.W, fill=tk.X)
+
+        total_bar = tk.Frame(frame3, bg="white")
+        total_bar.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
+        tk.Label(total_bar, text=" T1 Running", font=("Arial, 15")).grid(row=0, column=0)
+        tk.Label(total_bar, text=" T2 Running", font=("Arial, 15"), bg="blue", width=80).grid(row=0, column=1, padx=25)
+        tk.Label(frame3, text="").pack(side=tk.TOP,  fill=tk.X)
+        tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+        # scroll = tk.Scrollbar(frame3)
+        # scroll.pack(side=tk.RIGHT, fill=tk.Y)
+        # self.inputBox = tk.Listbox(frame3, bd=1, selectmode=tk.SINGLE, yscrollcommand=scroll.set, height=8)
+        # self.inputBox.pack(side=tk.TOP, anchor=tk.NW, fill=tk.X, expand=tk.YES)
+        # self.inputBox.insert(tk.END, "aaa")
+        # self.inputBox.insert(tk.END, "bbb")
+        # self.inputBox.insert(tk.END, "ccc")
+        # self.inputBox.insert(tk.END, "ddd")
+        # for i in range(0, 20):
+        #     self.inputBox.insert(tk.END, i)
+        # scroll.config(command=self.inputBox.yview)
+
+        # Input setting
+        """
+               nw        n         ne
+
+               w       center      e
+
+               sw        s          se
+        """
+        width = 10
+        frameInputSet = tk.Frame(frame3, bg="white")
+        frameInputSet.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
+        # tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack()
+        tk.Label(frameInputSet, text=" column1", font=("Arial, 15"), bg="gray", width=32).grid(row=1, column=0, padx=1)
+        tk.Label(frameInputSet, text=" column2", font=("Arial, 15"), bg="gray", width=68).grid(row=1, column=1, padx=1)
+
+        # columns = ("name", "gender")
+        # tree = ttk.Treeview(frame3, show="headings", columns=columns, selectmode=tk.BROWSE)
+        # # 设置表格文字居中
+        # tree.column("name", anchor="center")
+        # tree.column("gender", anchor="center")
+        # # 设置表格头部标题
+        # tree.heading("name", text="姓名")
+        # tree.heading("gender", text="性别")
+        # # 设置表格内容
+        # lists = [{"name": "yang", "gender": "男"}, {"name": "郑", "gender": "女"}]
+        # i = 0
+        # for v in lists:
+        #     tree.insert('', i, values=(v.get("name"), v.get("gender")))
+        #     i += 1
+        # tree.pack(expand=True, fill=tk.BOTH)
+
         scroll = tk.Scrollbar(frame3)
         scroll.pack(side=tk.RIGHT, fill=tk.Y)
         self.inputBox = tk.Listbox(frame3, bd=1, selectmode=tk.SINGLE, yscrollcommand=scroll.set, height=8)
         self.inputBox.pack(side=tk.TOP, anchor=tk.NW, fill=tk.X, expand=tk.YES)
+        self.inputBox.insert(tk.END, "aaa")
+        self.inputBox.insert(tk.END, "bbb")
+        self.inputBox.insert(tk.END, "ccc")
+        self.inputBox.insert(tk.END, "ddd")
+        for i in range(0, 20):
+            self.inputBox.insert(tk.END, i)
         scroll.config(command=self.inputBox.yview)
-
-        # Input setting
-        width = 10
-        frameInputSet = tk.Frame(frame3, bg="white")
-        frameInputSet.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
-        tk.Label(frameInputSet, text="  Input Setting").grid(row=0, column=0, pady=5)
-        tk.Label(frameInputSet, text="  Signal Type", width=width).grid(row=1, column=0)
-        # Tpye: 0 --> clock; 1 --> reset; 2 --> custom
-        type = tk.IntVar()
-        tk.Radiobutton(frameInputSet, text="Clock", variable=type, value=0,
-                       command=lambda: self.change_type(0, clockSet, resetSet, customSet), bd=1,
-                       indicatoron=0, width=width).grid(row=1, column=1, padx=10)
-        tk.Radiobutton(frameInputSet, text="Reset", variable=type, value=1,
-                       command=lambda: self.change_type(1, clockSet, resetSet, customSet), bd=1,
-                       indicatoron=0, width=width).grid(row=1, column=2, padx=10)
-        tk.Radiobutton(frameInputSet, text="Custom", variable=type, value=2,
-                       command=lambda: self.change_type(2, clockSet, resetSet, customSet), bd=1,
-                       indicatoron=0, width=width).grid(row=1, column=3, padx=10)
-        # Clock setting
-        clockSet, initalValue, converse = self.clock_set(frame3)
-        # Reset setting
-        resetSet = self.reset_set(frame3, initalValue, converse)
-        # Custom setting
-        customSet = self.custom_set(frame3, initalValue)
         return frame3
 
     def frame4_inter(self, frame4):
@@ -167,24 +201,27 @@ class TestBenchMaker:
         self.menu_set(window)
         # Place GUI on the center of screen
         self.place_gui(window)
+        # 每个页面的名字列表, 注意，有多少个label，就有多少个tk.Radiobutton
+        label_list = ["Input", "Output", "Other"]
+        tag_num = [0, 1, 2]
 
         # Tag: 0 --> input; 1 --> output; 2 --> other
         frame2 = tk.Frame(window)
-        frame2.pack(fill=tk.Y, pady=10)
+        frame2.pack(fill=tk.Y, pady=10, anchor=tk.NW)
         tag = tk.IntVar()
         tag_width = 23
-        tk.Radiobutton(frame2, text="Input", command=lambda: change_tag(0), width=tag_width,
+        tk.Radiobutton(frame2, text=label_list[tag_num[0]], command=lambda: change_tag(tag_num[0]), width=tag_width,
                        variable=tag, value=0, bd=1,
                        indicatoron=0).grid(column=0, row=1)
-        tk.Radiobutton(frame2, text="Output", command=lambda: change_tag(1), variable=tag,
+        tk.Radiobutton(frame2, text=label_list[tag_num[1]], command=lambda: change_tag(tag_num[1]), variable=tag,
                        width=tag_width, value=1, bd=1,
                        indicatoron=0).grid(column=1, row=1)
-        tk.Radiobutton(frame2, text="Other", command=lambda: change_tag(2), variable=tag,
+        tk.Radiobutton(frame2, text=label_list[tag_num[2]], command=lambda: change_tag(tag_num[2]), variable=tag,
                        width=tag_width, value=2, bd=1,
                        indicatoron=0).grid(column=2, row=1)
 
         # frame3 --> Input
-        frame3 = tk.Frame(window, height=300, bg="red")
+        frame3 = tk.Frame(window, height=300, bg="blue")
         frame3 = self.frame3_inter(frame3)
 
         # frame4 --> Output
