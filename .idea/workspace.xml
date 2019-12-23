@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb3d040c-877c-4d3e-984a-f9950ad5001c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/play/dragwindow.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/play/frame.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/play/remove.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/play/tab.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/play/tabview.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/play/test.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sourcefile/tabview.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Aimee.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Aimee.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/sourcefile/main.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sourcefile/frame.py" afterPath="$PROJECT_DIR$/sourcefile/frame.py" />
-      <change beforePath="$PROJECT_DIR$/sourcefile/maininterface.py" afterPath="$PROJECT_DIR$/sourcefile/maininterface.py" />
+      <change beforePath="$PROJECT_DIR$/sourcefile/frame.py" afterPath="$PROJECT_DIR$/play/frame1.py" />
+      <change beforePath="$PROJECT_DIR$/sourcefile/maininterface.py" afterPath="$PROJECT_DIR$/play/maininterface.py" />
+      <change beforePath="$PROJECT_DIR$/sourcefile/tabview.py" afterPath="$PROJECT_DIR$/play/tabview1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,6 +24,7 @@
     <SUITE FILE_PATH="coverage/pythonGUI$tab.coverage" NAME="tab Coverage Results" MODIFIED="1577072011753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/play" />
     <SUITE FILE_PATH="coverage/pythonGUI$interface.coverage" NAME="interface Coverage Results" MODIFIED="1576819481212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sourcefile" />
     <SUITE FILE_PATH="coverage/pythonGUI$framechange.coverage" NAME="framechange Coverage Results" MODIFIED="1576829219926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sourcefile" />
+    <SUITE FILE_PATH="coverage/pythonGUI$main.coverage" NAME="main Coverage Results" MODIFIED="1577082295541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sourcefile" />
     <SUITE FILE_PATH="coverage/pythonGUI$canvasdemo.coverage" NAME="canvasdemo Coverage Results" MODIFIED="1576818924759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sourcefile" />
     <SUITE FILE_PATH="coverage/pythonGUI$maininterface.coverage" NAME="maininterface Coverage Results" MODIFIED="1577071329577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sourcefile" />
   </component>
@@ -47,8 +42,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sourcefile/frame.py">
+      <file leaf-file-name="frame1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/play/frame1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
@@ -59,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tabview.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sourcefile/tabview.py">
+      <file leaf-file-name="tabview1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/play/tabview1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-90">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -74,8 +69,8 @@
       <file leaf-file-name="tab.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/play/tab.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="90">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="e#283#565#0" expanded="false" />
                 <element signature="e#630#1070#0" expanded="false" />
@@ -84,25 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maininterface.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sourcefile/maininterface.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sourcefile/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-159">
-              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="90">
+              <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dragwindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/play/dragwindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="e#52#1438#0" expanded="false" />
+                <element signature="e#50#9244#0" expanded="false" />
+                <element signature="e#266#1082#0" expanded="false" />
+                <element signature="e#1125#1371#0" expanded="false" />
+                <element signature="e#1474#1882#0" expanded="false" />
+                <element signature="e#1937#2812#0" expanded="false" />
+                <element signature="e#2890#3507#0" expanded="false" />
+                <element signature="e#3576#5104#0" expanded="false" />
+                <element signature="e#7108#7495#0" expanded="false" />
+                <element signature="e#7604#7886#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -116,6 +107,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>clockSet</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,6 +134,7 @@
         <option value="$PROJECT_DIR$/sourcefile/frame.py" />
         <option value="$PROJECT_DIR$/play/dragwindow.py" />
         <option value="$PROJECT_DIR$/play/tab.py" />
+        <option value="$PROJECT_DIR$/sourcefile/main.py" />
       </list>
     </option>
   </component>
@@ -220,8 +217,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tab">
-    <configuration name="frame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -234,7 +231,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonGUI" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sourcefile/frame.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sourcefile/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -253,7 +250,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonGUI" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sourcefile/maininterface.py" />
+      <option name="SCRIPT_NAME" value="F:\gitplay\Python_interface\pythonGUI\play\maininterface.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -318,18 +315,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.maininterface" />
-      <item index="1" class="java.lang.String" itemvalue="Python.frame" />
-      <item index="2" class="java.lang.String" itemvalue="Python.progressbar" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.tab" />
+      <item index="1" class="java.lang.String" itemvalue="Python.progressbar" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.tab" />
+      <item index="4" class="java.lang.String" itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.tab" />
-        <item index="1" class="java.lang.String" itemvalue="Python.maininterface" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.progressbar" />
-        <item index="4" class="java.lang.String" itemvalue="Python.frame" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.tab" />
+        <item index="2" class="java.lang.String" itemvalue="Python.maininterface" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.progressbar" />
       </list>
     </recent_temporary>
   </component>
@@ -357,9 +354,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38795987" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2419175" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -382,7 +379,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -404,7 +403,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourcefile/maininterface.py">
+    <entry file="file://$PROJECT_DIR$/play/maininterface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
@@ -412,7 +411,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourcefile/frame.py">
+    <entry file="file://$PROJECT_DIR$/play/frame1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="9" column="105" lean-forward="true" selection-start-line="9" selection-start-column="105" selection-end-line="9" selection-end-column="105" />
@@ -466,16 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/anacondatest/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="2741" column="8" lean-forward="false" selection-start-line="2741" selection-start-column="8" selection-end-line="2741" selection-end-column="8" />
-          <folding>
-            <element signature="e#96329#108145#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/play/progressbar.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -499,12 +488,12 @@
         <state relative-caret-position="930">
           <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourcefile/frame.py">
+    <entry file="file://$PROJECT_DIR$/play/frame1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
@@ -524,10 +513,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourcefile/tabview.py">
+    <entry file="file://$PROJECT_DIR$/play/tabview1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -536,8 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/play/tab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state relative-caret-position="90">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="e#283#565#0" expanded="false" />
             <element signature="e#630#1070#0" expanded="false" />
@@ -545,12 +534,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourcefile/maininterface.py">
+    <entry file="file://$PROJECT_DIR$/play/maininterface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="1260">
+          <caret line="42" column="12" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/anacondatest/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="2138" column="8" lean-forward="false" selection-start-line="2138" selection-start-column="8" selection-end-line="2138" selection-end-column="8" />
+          <folding>
+            <element signature="e#96329#108145#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourcefile/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding>
+            <element signature="e#50#9244#0" expanded="false" />
+            <element signature="e#266#1082#0" expanded="false" />
+            <element signature="e#1125#1371#0" expanded="false" />
+            <element signature="e#1474#1882#0" expanded="false" />
+            <element signature="e#1937#2812#0" expanded="false" />
+            <element signature="e#2890#3507#0" expanded="false" />
+            <element signature="e#3576#5104#0" expanded="false" />
+            <element signature="e#7108#7495#0" expanded="false" />
+            <element signature="e#7604#7886#0" expanded="false" />
           </folding>
         </state>
       </provider>
