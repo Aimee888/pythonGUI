@@ -30,11 +30,6 @@ class InitFace:
         filemenu1.add_command(label='保存...', command=click())
         filemenu1.add_command(label='关闭填写...', command=window.quit)
 
-        # 基准界面initface
-        self.initface = tk.Frame(self.master, )
-        self.initface.pack()
-        btn1 = tk.Button(self.initface, text='frame1', command=lambda: self.change(1)).grid(row=0, column=0)
-        btn2 = tk.Button(self.initface, text='frame2', command=lambda: self.change(2)).grid(row=0, column=1)
         self.change(1)
 
     def change(self, num):
@@ -42,7 +37,6 @@ class InitFace:
             1: FrameOne,
             2: FrameTwo
         }
-        self.initface.destroy()
         switch[num](self.master)
 
 
@@ -56,4 +50,3 @@ if __name__ == "__main__":
     InitFace(window)
 
     window.mainloop()
-    print("hello")
