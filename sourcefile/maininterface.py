@@ -1,5 +1,5 @@
-from play.canvasdemo import *
 from frame import *
+from tkinter import *
 
 
 class InitFace:
@@ -30,14 +30,14 @@ class InitFace:
         filemenu1.add_command(label='保存...', command=click())
         filemenu1.add_command(label='关闭填写...', command=window.quit)
 
-        self.change(1)
+        tabview_set(self.master)
 
-    def change(self, num):
-        switch = {
-            1: FrameOne,
-            2: FrameTwo
-        }
-        switch[num](self.master)
+    # def change(self, num):
+    #     switch = {
+    #         1: FrameOne,
+    #         2: FrameTwo
+    #     }
+    #     switch[num](self.master)
 
 
 def click():
