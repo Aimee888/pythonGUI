@@ -138,35 +138,47 @@ class TestBenchMaker:
         frameInputSet = tk.Frame(frame3, bg="white")
         frameInputSet.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
         # tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack()
-        tk.Label(frameInputSet, text=" column1", font=("Arial, 15"), bg="gray", width=32).grid(row=1, column=0, padx=1)
-        tk.Label(frameInputSet, text=" column2", font=("Arial, 15"), bg="gray", width=68).grid(row=1, column=1, padx=1)
+        tk.Label(frameInputSet, text=" column1", font=("Arial, 15"), bg="Lavender", width=32).grid(row=1, column=0, padx=1)
+        tk.Label(frameInputSet, text=" column2", font=("Arial, 15"), bg="Lavender", width=68).grid(row=1, column=1, padx=1)
 
-        # columns = ("name", "gender")
-        # tree = ttk.Treeview(frame3, show="headings", columns=columns, selectmode=tk.BROWSE)
-        # # 设置表格文字居中
-        # tree.column("name", anchor="center")
-        # tree.column("gender", anchor="center")
-        # # 设置表格头部标题
-        # tree.heading("name", text="姓名")
-        # tree.heading("gender", text="性别")
-        # # 设置表格内容
-        # lists = [{"name": "yang", "gender": "男"}, {"name": "郑", "gender": "女"}]
-        # i = 0
-        # for v in lists:
-        #     tree.insert('', i, values=(v.get("name"), v.get("gender")))
-        #     i += 1
-        # tree.pack(expand=True, fill=tk.BOTH)
+        # test_box = tk.Frame(frame3, bg="white")
+        # test_box.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
+        # tk.Label(test_box, text=" test1", font=("Arial, 10"), width=45).grid(row=1, column=0, padx=1)
+        # tk.Label(test_box, text=" test2", font=("Arial, 10"), width=90, bg="blue").grid(row=1, column=1, padx=20)
 
         scroll = tk.Scrollbar(frame3)
         scroll.pack(side=tk.RIGHT, fill=tk.Y)
-        self.inputBox = tk.Listbox(frame3, bd=1, selectmode=tk.SINGLE, yscrollcommand=scroll.set, height=8)
+        self.inputBox = tk.Listbox(frame3, bd=1, selectmode=tk.SINGLE, yscrollcommand=scroll.set, height=8, width=135)
         self.inputBox.pack(side=tk.TOP, anchor=tk.NW, fill=tk.X, expand=tk.YES)
-        self.inputBox.insert(tk.END, "aaa")
-        self.inputBox.insert(tk.END, "bbb")
-        self.inputBox.insert(tk.END, "ccc")
-        self.inputBox.insert(tk.END, "ddd")
-        for i in range(0, 20):
-            self.inputBox.insert(tk.END, i)
+        left0 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=45, bg="white")
+        left0.grid(row=0, column=0, padx=1)
+        right0 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=90, bg="blue")
+        right0.grid(row=0, column=1, padx=20)
+        left1 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=45, bg="white")
+        left1.grid(row=1, column=0, padx=1)
+        right1 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=90, bg="blue")
+        right1.grid(row=1, column=1, padx=20)
+        left2 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=45, bg="white")
+        left2.grid(row=2, column=0, padx=1)
+        right2 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=90, bg="blue")
+        right2.grid(row=2, column=1, padx=20)
+        left3 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=45, bg="white")
+        left3.grid(row=3, column=0, padx=1)
+        right3 = tk.Label(self.inputBox, text="", font=("Arial, 10"), width=90, bg="blue")
+        right3.grid(row=3, column=1, padx=20)
+        right0["bg"] = "white"
+        right1["bg"] = "white"
+        right2["bg"] = "white"
+        right3["bg"] = "white"
+        # left1["text"] = "xiugai"
+        # left1.destroy()
+        # right1.destroy()
+        # self.inputBox.insert(tk.END, "aaa")
+        # self.inputBox.insert(tk.END, "bbb")
+        # self.inputBox.insert(tk.END, "ccc")
+        # self.inputBox.insert(tk.END, "ddd")
+        # for i in range(0, 20):
+        #     self.inputBox.insert(tk.END, i)
         scroll.config(command=self.inputBox.yview)
         return frame3
 
@@ -221,7 +233,7 @@ class TestBenchMaker:
                        indicatoron=0).grid(column=2, row=1)
 
         # frame3 --> Input
-        frame3 = tk.Frame(window, height=300, bg="blue")
+        frame3 = tk.Frame(window, height=300, bg="white")
         frame3 = self.frame3_inter(frame3)
 
         # frame4 --> Output
