@@ -178,11 +178,25 @@ class TestBenchMaker:
         items_list = tk.Frame(frame3)
         items_list.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
         # tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack()
-        tk.Label(items_list, text=" item1", font=("Arial, 15"), bg="Lavender", width=20).grid(row=0, column=0,
-                                                                                                   padx=1)
-        tk.Label(items_list, text=" item2", font=("Arial, 15"), bg="Lavender", width=8).grid(row=0, column=1,
-                                                                                                   padx=1)
-        tk.Text(items_list).grid(row=0, column=0, padx=10)
+        # tk.Label(items_list, text=" item1", font=("Arial, 15"), bg="Lavender", width=20).grid(row=0, column=0, padx=1)
+        # tk.Label(items_list, text=" item2", font=("Arial, 15"), bg="Lavender", width=8).grid(row=0, column=1, padx=1)
+        t1 = tk.Text(items_list, width=45)
+        t1.grid(row=0, column=0, padx=10)
+        # t1.config(state=tk.DISABLED)
+        t2 = tk.Text(items_list, width=45)
+        t2.grid(row=0, column=1, padx=10)
+        # t2.config(state=tk.DISABLED)
+        t3 = tk.Text(items_list, width=45)
+        t3.grid(row=0, column=2, padx=10)
+        # t3.config(state=tk.DISABLED)
+
+        t1.insert(tk.END, "111")
+        t2.insert(tk.END, "222")
+        t3.insert(tk.END, "333")
+
+        tk.Label(frame3, text="", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+        blank_row = tk.Label(frame3, text="", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+        tk.Button(blank_row, text="stop", width=15, height=2).pack(side=tk.TOP)
 
         return frame3
 
