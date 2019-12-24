@@ -1,4 +1,6 @@
 import tkinter as tk
+import threading
+import time
 from tkinter import ttk
 
 
@@ -103,17 +105,51 @@ class TestBenchMaker:
         tk.Button(customSet, text="test", command=lambda: print(initalValue.get())).grid()
         return customSet
 
+    @staticmethod
+    def update_progress_bar(sum_length, canvas_progress_bar, canvas_shape, canvas_text):
+        for percent in range(1, 101):
+            hour = int(percent / 3600)
+            minute = int(percent / 60) - hour * 60
+            second = percent % 60
+            green_length = int(sum_length * percent / 100)
+            canvas_progress_bar.coords(canvas_shape, (0, 0, green_length, 25))
+            canvas_progress_bar.itemconfig(canvas_text, text='%0.2f %%' % percent)
+            # var_progress_bar_percent.set('%0.2f %%' % percent)
+            time.sleep(0.5)
+
+    def run(self, sum_length, canvas_progress_bar, canvas_shape, canvas_text):
+        th = threading.Thread(target=self.update_progress_bar, args=(
+            sum_length, canvas_progress_bar, canvas_shape, canvas_text))
+        th.setDaemon(True)
+        th.start()
+
     def frame3_inter(self, frame3):
         frame3.pack(side=tk.TOP, fill=tk.X)
-        tk.Label(frame3, text="TEST1 CENTER", font=("Arial, 25")).pack(side=tk.TOP, fill=tk.X)
+        tk.Label(frame3, text="TEST1 CENTER", font="Arial, 25").pack(side=tk.TOP, fill=tk.X)
         tk.Label(frame3, text="").pack(side=tk.TOP, anchor=tk.W, fill=tk.X)
 
         total_bar = tk.Frame(frame3, bg="white")
         total_bar.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
-        tk.Label(total_bar, text=" T1 Running", font=("Arial, 15")).grid(row=0, column=0)
-        tk.Label(total_bar, text=" T2 Running", font=("Arial, 15"), bg="blue", width=80).grid(row=0, column=1, padx=25)
+        # 进度条描述
+        total_bar_descrip = tk.Label(total_bar, text=" T1 Running", font="Arial, 15")
+        total_bar_descrip.grid(row=0, column=0)
+        # 进度条
+        total_bar_pic = tk.Label(total_bar, text="", font="Arial, 15", width=88)
+        total_bar_pic.grid(row=0, column=1, padx=25)
+        sum_length = 680
+        canvas_progress_bar = tk.Canvas(total_bar_pic, width=sum_length, height=25, bg="LightGrey")
+        canvas_shape = canvas_progress_bar.create_rectangle(0, 0, 0, 25, fill='MediumSeaGreen')
+        canvas_text = canvas_progress_bar.create_text(292, 4, anchor=tk.NW)
+        canvas_progress_bar.itemconfig(canvas_text, text='00.00 %')
+        # var_progress_bar_percent = tk.StringVar()
+        # var_progress_bar_percent.set('00.00 %')
+        # label_progress_bar_percent = tk.Label(total_bar_pic, textvariable=var_progress_bar_percent, fg='#F5F5F5', bg='#535353')
+        # canvas_progress_bar.place(relx=0.45, rely=0.4, anchor=tk.CENTER)
+        canvas_progress_bar.place(anchor=tk.NW)
+        # label_progress_bar_percent.place(relx=0.89, rely=0.4, anchor=tk.CENTER)
+
         tk.Label(frame3, text="").pack(side=tk.TOP,  fill=tk.X)
-        tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+        tk.Label(frame3, text=" Input Setting", font="Arial, 15", anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
         # scroll = tk.Scrollbar(frame3)
         # scroll.pack(side=tk.RIGHT, fill=tk.Y)
         # self.inputBox = tk.Listbox(frame3, bd=1, selectmode=tk.SINGLE, yscrollcommand=scroll.set, height=8)
@@ -180,13 +216,13 @@ class TestBenchMaker:
         # tk.Label(frame3, text=" Input Setting", font=("Arial, 15"), anchor=tk.NW).pack()
         # tk.Label(items_list, text=" item1", font=("Arial, 15"), bg="Lavender", width=20).grid(row=0, column=0, padx=1)
         # tk.Label(items_list, text=" item2", font=("Arial, 15"), bg="Lavender", width=8).grid(row=0, column=1, padx=1)
-        t1 = tk.Text(items_list, width=45)
+        t1 = tk.Text(items_list, width=45, height=28)
         t1.grid(row=0, column=0, padx=10)
         # t1.config(state=tk.DISABLED)
-        t2 = tk.Text(items_list, width=45)
+        t2 = tk.Text(items_list, width=45, height=28)
         t2.grid(row=0, column=1, padx=10)
         # t2.config(state=tk.DISABLED)
-        t3 = tk.Text(items_list, width=45)
+        t3 = tk.Text(items_list, width=45, height=28)
         t3.grid(row=0, column=2, padx=10)
         # t3.config(state=tk.DISABLED)
 
@@ -194,9 +230,11 @@ class TestBenchMaker:
         t2.insert(tk.END, "222")
         t3.insert(tk.END, "333")
 
-        tk.Label(frame3, text="", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
-        blank_row = tk.Label(frame3, text="", font=("Arial, 15"), anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
-        tk.Button(blank_row, text="stop", width=15, height=2).pack(side=tk.TOP)
+        tk.Label(frame3, text="", font="Arial, 5", anchor=tk.NW).pack(side=tk.TOP, fill=tk.X)
+        blank_row = tk.Label(frame3, text="", font="Arial, 15", anchor=tk.NW)
+        blank_row.pack(side=tk.TOP, fill=tk.X)
+        tk.Button(blank_row, text="stop", width=15, height=2, command=lambda: self.run(
+            sum_length, canvas_progress_bar, canvas_shape, canvas_text)).pack(side=tk.TOP)
 
         return frame3
 
